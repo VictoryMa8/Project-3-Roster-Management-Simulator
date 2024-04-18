@@ -1,0 +1,183 @@
+
+# screen 1 (after a blank line)
+
+Welcome to the NBA Simulator! 
+In this simulator, you will be managing your own NBA franchise.
+Your goal will be to the win in the NBA finals and obtain the Larry O'Brien Championship Trophy!
+Created by Jimmy, Ian, & Victor.
+Press return to start.
+
+
+# screen 2
+To start simulating, you will select a team to manage.
+You will select a team from a division.
+To browse divisions, select a conference:
+
+1) Eastern Conference
+2) Western Conference
+
+# screen 3
+You chose the Eastern Conference.
+To browse teams, select a division:
+
+1) Atlantic Division
+2) Central Division
+3) Southeast Division
+4) Go Back
+
+# screen 4
+You chose the Western Conference.
+To browse teams, select a division:
+
+1) Northwest Division
+2) Pacific Division
+3) Southwest Division
+4) Go Back
+
+# screen 5
+You chose the Atlantic Division.
+Select a team to start managing:
+
+1) Boston Celtics
+2) Brooklyn Nets
+3) Philadelphia 76ers
+4) New York Knicks
+5) Toronto Raptors
+6) Go Back
+
+# screen 6
+You chose the Central Division.
+Select a team to start managing:
+
+1) Chicago Bulls
+2) Cleveland Cavaliers
+3) Detroit Pistons
+4) Indiana Pacers
+5) Milwaukee Bucks
+6) Go Back
+
+# screen 7
+You chose the Southeast Division.
+Select a team to start managing:
+
+1) Atlanta Hawks
+2) Charlotte Hornets
+3) Miami Heat
+4) Orlando Magic
+5) Washington Wizards
+6) Go Back
+
+# screen 8
+You chose the Northwest Division.
+Select a team to start managing:
+
+1) Denver Nuggets
+2) Minnesota Timberwolves
+3) Oklahoma City Thunder
+4) Portland Trailblazers
+5) Utah Jazz
+6) Go Back
+
+# screen 9
+You chose the Pacific Division.
+Select a team to start managing:
+
+1) Golden State Warriors
+2) Los Angeles Clippers
+3) Los Angeles Lakers
+4) Phoenix Suns
+5) Sacramento Kings
+6) Go Back
+
+# screen 10
+You chose the Southwest Division.
+Select a team to start managing:
+
+1) Dallas Mavericks
+2) Houston Rockets
+3) Memphis Grizzlies
+4) New Orleans Pelicans
+5) San Antonio Spurs
+6) Go Back
+
+# screen 11
+
+Welcome to the 2023-2024 NBA season!
+You will be managing your very own NBA franchise.
+
+1) Go To The Main Menu
+2) Go Back To The Start
+
+# screen 12
+
+Welcome to the main menu!
+What would you like to do?
+
+1) Your Team Summary
+2) View Rosters & Player Statistics
+3) Trade For Players
+4) Check The Standings
+5) Simulate The Next Game
+6) Player Development
+7) Find A New Coach
+8) Save / Load
+
+# screen 13
+2) Go Back
+
+# screen 14
+Select a team to view information about their roster (1-30)
+31) Go Back
+
+# screen 15
+Select a team to start trading with, or go back to the main menu
+31) Go Back
+
+# screen 16
+2) Go Back
+
+# screen 17
+Check updated standings in the menu
+2) Go Back
+
+# screen 18
+
+16) Go Back
+
+# screen 19
+
+16) Go Back
+
+# screen 20
+1) Go Back
+
+# screen 21
+Develop the skills of one of your players
+Once you select a player, they will be begin their training
+Training is completed within 5 days
+16) Go Back
+
+
+# screen 22
+Select a coach to replace your current one
+11) Go Back
+
+# screen 23
+1) Go Back
+
+# screen 24
+1) Go Back
+
+# screen 25
+1) Go Back
+
+# screen 26
+1) Go back
+2) Save
+3) Load
+
+# screen 27
+1) Go back
+
+# screen 28 
+1) Go back
