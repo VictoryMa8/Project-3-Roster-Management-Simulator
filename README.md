@@ -5,11 +5,6 @@ Team Members: Ian, Jimmy, & Victor
 
 This project was made for CSCI 251: Software Design, taught by Professor Olaf Hall-Holt at St. Olaf College in Northfield, Minnesota.
 
-In order to run the application, type:
-
-g++ -std=c++11 new_nba_sim.cpp 
-./a.out
-
 There will be a welcome screen, where the user presses enter to start the game.
 The first part of the game is selecting the user's team.
 The user can browse the teams according to their conference and division.
