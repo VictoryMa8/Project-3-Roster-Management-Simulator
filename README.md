@@ -1,4 +1,4 @@
-# default
+# Roster Management Simulator
 
 Roster Management Simulator / NBA Simulator
 Team Members: Ian, Jimmy, & Victor
