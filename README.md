@@ -5,8 +5,6 @@ Team Members: Ian, Jimmy, & Victor
 
 This project was made for CSCI 251: Software Design, taught by Professor Olaf Hall-Holt at St. Olaf College in Northfield, Minnesota.
 
-README.md file created by Victory Ma
-
 In order to run the application, type:
 
 g++ -std=c++11 new_nba_sim.cpp 
@@ -72,3 +70,5 @@ The user can replace their coach however many times they want.
 The eighth option allows the user to exit the simulation.
 
 This simulator aims to give the user a unique experience with trading players, simulating games, training players, hiring new coaches, and finding ways to optimize one's own team.
+
+README.md file created by Victory Ma, updated May 28, 2024
