@@ -11,10 +11,9 @@
 #include"Trades.h"
 #include"Calendar.h"
 #include"Coach.h"
-#include"/usr/local/cs/cs251/react.h"
 using namespace std;
 
-// NBA simulator 
+// Roster Management Simulator / NBA Simulator 
 // Created by Jimmy, Victor, & Ian
 
 // state class used in conjunction with screen_num
@@ -27,7 +26,7 @@ class State {
 
     void write_to(ostream &os) const { os << screen_num << endl; }
 
-    void update(string input, istream &is);
+    void update(const string &input);
 
 };
 
@@ -71,15 +70,10 @@ void read_text_data() {
 // display screen number and screen specific text
 void display_text(const State &state, ostream &os) {
     int n = state.get_screen_num();
-    if (react) {
-	    _add_yaml("story.yaml", {{"prompt_index", prompt_index},
-   	          	{"input_index", input_index}});
-	  os << "~~~~~~~~~~~~~~~~~~~~~~~~~";  // 25 bytes of filler
-    } else os << "\033c";
-
-    os << "               	"
-        << "[screen " << n << "]" << endl
- 	      << text[n];
+    os << "\033c               	"
+ 	        << "[screen " << n << "]" << endl
+ 	        << text[n];
+    if (n >= limit) exit(0);
 
     if (state.get_screen_num() == 11) { // welcome screen
       os << "You selected the: " << selected_team->name << endl;
@@ -192,17 +186,6 @@ void display_text(const State &state, ostream &os) {
     swap(nair->roster[selectedPlayerIndex + xx], selected_team->roster[selectedPlayerIndex + yy]);
     os << "Trade was successful" << endl;
 
-   
-
- 
-
-
-
-
-
-
-
-
   }
 
   if (state.get_screen_num() == 21) { // player development
@@ -254,6 +237,7 @@ if (state.get_screen_num() == 25) {
                 }
             }
 }
+
 if (state.get_screen_num() == 26){
   os << "loos here" << endl;
 }
@@ -261,13 +245,9 @@ if (state.get_screen_num() == 26){
     if (react) os << '\0';  // provide ending null-byte
     else if (n >= limit) exit(0);
 }
+
 // used to be called update_screen_num
-void State::update(string input, istream &is) {
-  if (react && _received_event()) {
-  	// get input from the stream
-	  is.get(); is.get();  // skip first two characters
-  	if ('~' != is.peek()) getline(is, input, '\0');
-  }
+void State::update(const string &input) {
 
   if (0 == screen_num) {
     screen_num = 1;
@@ -407,8 +387,7 @@ void State::update(string input, istream &is) {
       else if (5 == input_num) screen_num = 17;
       else if (6 == input_num) screen_num = 21;
       else if (7 == input_num) screen_num = 22;
-      else if (8 == input_num) screen_num = 25;
-      else if (9 == input_num) screen_num = 26;
+      else if (8 == input_num) exit(0);
     
     }
     else if(screen_num >= 13 && screen_num <= 17) {
@@ -481,16 +460,6 @@ void State::update(string input, istream &is) {
         screen_num = 12;
       }
       }
-
-
-
-
-
-
-
-
-
-
 
     }
     else if (screen_num == 18) {
@@ -632,7 +601,6 @@ else if (screen_num == 19) {
             yourSelectedTraded = selected_team->roster[14]->player_name;
           }
       
-
             screen_num = 20;
           }
     else if (screen_num == 20){
@@ -681,31 +649,27 @@ else if (screen_num == 19) {
   }
 }
 
-int main(int argc, char **argv) {
+int main() {
 
-  react = (argc > 1);
-  read_text_data();
+  for (int i = 0; i < 30; ++i) {
+  nba_teams[i].initialize_roster();
+  }
 
-  bool just_starting = react ? _read_event_info() : true;
-  while (1) {
+    read_text_data();
+
+    bool just_starting = true;
+    while (1) {
         ifstream fs1(just_starting ? "initial_state" : "curr_state");
         State state(fs1);
         fs1.close();
 
         string input;
         if (just_starting) just_starting = false;
-        else if (!react) getline(cin, input);
+        else getline(cin, input);
+        state.update(input);
+        display_text(state, cout);
 
-        ifstream fs2("incoming_text");
-        state.update(input, fs2);
-
-        ofstream fs3("outgoing_text"), fs4(react ? "end_state" : "curr_state");
-        display_text(state, react ? fs3 : cout);
-        state.write_to(fs4);
-
-        if (react) {
-  	      _write_react_yaml();
-  	      break;
-        }
+        ofstream fs2("curr_state");
+        state.write_to(fs2);
     }
 }

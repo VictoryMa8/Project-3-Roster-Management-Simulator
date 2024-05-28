@@ -1,11 +1,15 @@
 # default
 
-Members: Ian, Jimmy, & Victor
+Roster Management Simulator / NBA Simulator
+Team Members: Ian, Jimmy, & Victor
 
-In order to run the latest version, type:
+This project was made for CSCI 251: Software Design, taught by Professor Olaf Hall-Holt at St. Olaf College in Northfield, Minnesota.
 
-g++ -g -Wall -c new_nba_sim.cpp
-g++ -g -Wall new_nba_sim.o /usr/local/cs/cs251/react.o -lcurl
+README.md file created by Victory Ma
+
+In order to run the application, type:
+
+g++ -std=c++11 new_nba_sim.cpp 
 ./a.out
 
 There will be a welcome screen, where the user presses enter to start the game.
@@ -22,7 +26,7 @@ Once they confirm and go to the main menu, there will be eight options for them 
 5) Simulate The Next Game
 6) Player Development 
 7) Find A New Coach
-8) Save / Load Game
+8) Exit Simulation
 
 Input the numbers to choose the options.
 
@@ -65,7 +69,6 @@ The user can select from 10 different coaches who have different 'modifiers'
 The modifiers multiply the statistical values of all players on the user's roster.
 The user can replace their coach however many times they want.
 
-The eighth option allows the user to save their game, or load a previous save file.
+The eighth option allows the user to exit the simulation.
 
-This NBA simulator aims to give the user a fun experience with trading players, simulating games, training players, hiring new coaches, 
-and finding ways to optimize one's own NBA team.
+This simulator aims to give the user a unique experience with trading players, simulating games, training players, hiring new coaches, and finding ways to optimize one's own team.

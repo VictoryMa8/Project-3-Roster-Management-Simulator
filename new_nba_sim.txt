@@ -120,7 +120,7 @@ What would you like to do?
 5) Simulate The Next Game
 6) Player Development
 7) Find A New Coach
-8) Save / Load
+8) Exit Simulation
 
 # screen 13
 2) Go Back
